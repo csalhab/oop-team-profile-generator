@@ -5,18 +5,21 @@
 //FUNCTIONS ================================================
 // TODO: Create a function that returns the member's icon
 function determineMemberIcon(teamMember) {
-    switch (teamMember)
+  switch (teamMember) {
     case "Manager":
-        return "../assets/images/manager-tigger.jpg";
+      return "../assets/images/manager-tigger.jpg";
     case "Engineer":
-        return "../assets/images/gear-engineer.jpg";
+      return "../assets/images/gear-engineer.jpg";
     case "Intern":
-        return "../assets/images/grad.jpg";
+      return "../assets/images/grad.jpg";
+    default:
+      return "../assets/images/manager-tigger.jpg";
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateHTML(data) {
-    return `
+  return `
 
     `;
 }

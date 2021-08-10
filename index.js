@@ -2,10 +2,10 @@
 //Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const genHTML = require("./lib/Employee");
-const genHTML = require("./lib/Manager");
-const genHTML = require("./lib/Engineer");
-const genHTML = require("./lib/Intern");
+const employee = require("./lib/Employee");
+const manager = require("./lib/Manager");
+const engineer = require("./lib/Engineer");
+const intern = require("./lib/Intern");
 const genHTML = require("./src/generateHTML");
 
 //DATA =====================================================
@@ -66,6 +66,11 @@ const engineerQuestions = [
     type: "input",
     name: "engineerEmail",
     message: "What is your engineer's email?",
+  },
+  {
+    type: "input",
+    name: "engineerGithub",
+    message: "What is your engineer's GitHub username?",
   },
 ];
 
