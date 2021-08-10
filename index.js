@@ -105,6 +105,7 @@ function captureEngineerInfo() {
     teamArray.push(engineerInfo);
     console.log("inside engineer: ");
     console.log(teamArray);
+    selectTeamMember();
   });
 }
 
@@ -114,6 +115,7 @@ function captureInternInfo() {
     teamArray.push(internInfo);
     console.log("inside intern: ");
     console.log(teamArray);
+    selectTeamMember();
   });
 }
 
@@ -123,7 +125,7 @@ function teamFinished() {
 }
 
 //ask for Manager to select a team member type
-function selectTeamMemeber() {
+function selectTeamMember() {
   inquirer.prompt(selectTeamMemberQuestion).then(function (selectedMember) {
     teamArray.push(selectedMember);
     if (selectedMember.teamMember === "Engineer") {
@@ -143,7 +145,7 @@ function init() {
     .prompt(initialManagerQuestions)
     .then(function (managerAnswers) {
       teamArray.push(managerAnswers);
-      selectTeamMemeber();
+      selectTeamMember();
     })
     .catch((error) => {
       if (error.isTtyError) {
