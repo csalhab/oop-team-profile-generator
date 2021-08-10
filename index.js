@@ -105,6 +105,7 @@ function captureEngineerInfo() {
     teamArray.push(engineerInfo);
     console.log("inside engineer: ");
     console.log(teamArray);
+    //loop back so Manager can select another team member or not
     selectTeamMember();
   });
 }
@@ -115,6 +116,7 @@ function captureInternInfo() {
     teamArray.push(internInfo);
     console.log("inside intern: ");
     console.log(teamArray);
+    //loop back so Manager can select another team member or not
     selectTeamMember();
   });
 }
