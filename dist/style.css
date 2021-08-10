@@ -1,0 +1,70 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+header {
+  font-size: 4em;
+  width: 100vw;
+  background-color: #173d1c;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.icon-team-type-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-holder {
+  background-color: #572f1e;
+  color: #57dddb;
+  font-size: 2em;
+}
+
+.card-holder img {
+  border: 1px solid #57dddb;
+  display: flex;
+  margin-left: 18px;
+}
+
+.card-holder p {
+  align-items: center;
+}
+
+.card {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 8px 8px 8px #b79675;
+}
+
+p {
+  font-size: 0.75em;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.card-list {
+  padding: 20px;
+}
+
+.card-bottom {
+  background-color: #57dddb;
+}
