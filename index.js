@@ -111,6 +111,7 @@ function writeToFile(fileName, answers) {
 //ask for Engineer info
 function captureEngineerInfo() {
   inquirer.prompt(engineerQuestions).then(function (engineerInfo) {
+    engineerInfo.teamMember = "Engineer";
     teamArray.push(engineerInfo);
     console.log("inside engineer: ");
     console.log(teamArray);
@@ -122,6 +123,7 @@ function captureEngineerInfo() {
 //ask for Intern info
 function captureInternInfo() {
   inquirer.prompt(internQuestions).then(function (internInfo) {
+    internInfo.teamMember = "Intern";
     teamArray.push(internInfo);
     console.log("inside intern: ");
     console.log(teamArray);
@@ -138,7 +140,6 @@ function teamFinished() {
 //ask for Manager to select a team member type
 function selectTeamMember() {
   inquirer.prompt(selectTeamMemberQuestion).then(function (selectedMember) {
-    teamArray.push(selectedMember);
     if (selectedMember.teamMember === "Engineer") {
       captureEngineerInfo();
     } else if (selectedMember.teamMember === "Intern") {
@@ -155,7 +156,12 @@ function init() {
   inquirer
     .prompt(initialManagerQuestions)
     .then(function (managerAnswers) {
+      console.log("manager answers: ");
+      console.log(managerAnswers);
+      managerAnswers.teamMember = "Manager";
       teamArray.push(managerAnswers);
+      console.log("manager answers AFTER: ");
+      console.log(managerAnswers);
       selectTeamMember();
     })
     .catch((error) => {
