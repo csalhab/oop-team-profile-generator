@@ -1,26 +1,4 @@
-//DEPENDENCIES =============================================
 
-//DATA =====================================================
-
-//FUNCTIONS ================================================
-// TODO: Create a function that returns the member's icon
-function determineMemberIcon() {
-  switch ("teamMember") {
-    case "Manager":
-      return "../assets/images/manager-tigger.jpg";
-    case "Engineer":
-      return "../assets/images/gear-engineer.jpg";
-    case "Intern":
-      return "../assets/images/grad.jpg";
-    default:
-      return "../assets/images/manager-tigger.jpg";
-  }
-}
-
-function generateHTML(data) {
-  //console.log("inside generateHTML function...");
-  //console.log(data);
-  return `
   <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +26,7 @@ function generateHTML(data) {
         <div class="col card-container">
           <div class="card" style="width: 20rem">
             <div class="card-top">
-              <div class="card-header card-holder">${data[0].managerName}</div>
+              <div class="card-header card-holder">Claudia</div>
               <div class="icon-team-type-container card-holder">
                 <img
                   src="../assets/images/manager-tigger.jpg"
@@ -56,25 +34,25 @@ function generateHTML(data) {
                   height="44"
                   alt="manager tigger mug"
                 />
-                <p>${data[0].teamMember}</p>
+                <p>Manager</p>
               </div>
             </div>
             <div class="card-bottom">
               <ul class="list-group list-group-flush card-list">
-                <li class="list-group-item">ID: ${data[0].managerId}</li>
+                <li class="list-group-item">ID: 1</li>
                 <li class="list-group-item">
                   Email:
-                  <a href="mailto:${data[0].managerEmail}"
-                    >${data[0].managerEmail}</a
+                  <a href="mailto:c.com"
+                    >c.com</a
                   >
                 </li>
-                <li class="list-group-item">Office number: ${data[0].managerOfficeNumber}</li>
+                <li class="list-group-item">Office number: 1</li>
               </ul>
             </div>
           </div>
           <div class="card" style="width: 20rem">
             <div class="card-top">
-              <div class="card-header card-holder">${data[1].engineerName}</div>
+              <div class="card-header card-holder">Erika</div>
               <div class="icon-team-type-container card-holder">
                 <img
                   src="../assets/images/gear-engineer.jpg"
@@ -82,20 +60,20 @@ function generateHTML(data) {
                   height="44"
                   alt="engineer gears"
                 />
-                <p>${data[1].teamMember}</p>
+                <p>Engineer</p>
               </div>
             </div>
             <div class="card-bottom">
               <ul class="list-group list-group-flush card-list">
-                <li class="list-group-item">ID: ${data[1].engineerId}</li>
+                <li class="list-group-item">ID: 2</li>
                 <li class="list-group-item">
                   Email:
-                  <a href="mailto:${data[1].engineerEmail}">${data[1].engineerEmail}</a>
+                  <a href="mailto:e.com">e.com</a>
                 </li>
                 <li class="list-group-item">
                   GitHub:
-                  <a href="https://github.com/${data[1].engineerGithub}" target="_blank"
-                    >${data[1].engineerGithub}</a
+                  <a href="https://github.com/ibarra" target="_blank"
+                    >ibarra</a
                   >
                 </li>
               </ul>
@@ -103,7 +81,7 @@ function generateHTML(data) {
           </div>
           <div class="card" style="width: 20rem">
             <div class="card-top">
-              <div class="card-header card-holder">${data[2].engineerName}</div>
+              <div class="card-header card-holder">Joe</div>
               <div class="icon-team-type-container card-holder">
                 <img
                   src="../assets/images/gear-engineer.jpg"
@@ -111,22 +89,22 @@ function generateHTML(data) {
                   height="44"
                   alt="engineer gears"
                 />
-                <p>${data[2].teamMember}</p>
+                <p>Engineer</p>
               </div>
             </div>
             <div class="card-bottom">
               <ul class="list-group list-group-flush card-list">
-                <li class="list-group-item">ID: ${data[2].engineerId}</li>
+                <li class="list-group-item">ID: 3</li>
                 <li class="list-group-item">
                   Email:
-                  <a href="mailto:${data[2].engineerEmail}"
-                    >${data[2].engineerEmail}</a
+                  <a href="mailto:j.com"
+                    >j.com</a
                   >
                 </li>
                 <li class="list-group-item">
                   GitHub:
-                  <a href="https://github.com/${data[2].engineerGithub}" target="_blank"
-                    >${data[2].engineerGithub}</a
+                  <a href="https://github.com/joey" target="_blank"
+                    >joey</a
                   >
                 </li>
               </ul>
@@ -134,7 +112,7 @@ function generateHTML(data) {
           </div>
           <div class="card" style="width: 20rem">
             <div class="card-top">
-              <div class="card-header card-holder">${data[3].engineerName}</div>
+              <div class="card-header card-holder">Mae</div>
               <div class="icon-team-type-container card-holder">
                 <img
                   src="../assets/images/gear-engineer.jpg"
@@ -142,26 +120,26 @@ function generateHTML(data) {
                   height="44"
                   alt="engineer gears"
                 />
-                <p>${data[3].teamMember}</p>
+                <p>Engineer</p>
               </div>
             </div>
             <div class="card-bottom">
               <ul class="list-group list-group-flush card-list">
-                <li class="list-group-item">ID: ${data[3].engineerId}</li>
+                <li class="list-group-item">ID: 4</li>
                 <li class="list-group-item">
                   Email:
-                  <a href="mailto:${data[3].engineerEmail}">${data[3].engineerEmail}</a>
+                  <a href="mailto:mae.com">mae.com</a>
                 </li>
                 <li class="list-group-item">
                   GitHub:
-                  <a href="https://github.com/${data[3].engineerGithub}" target="_blank">${data[3].engineerGithub}</a>
+                  <a href="https://github.com/mae" target="_blank">mae</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="card" style="width: 20rem">
             <div class="card-top">
-              <div class="card-header card-holder">${data[4].internName}</div>
+              <div class="card-header card-holder">Jozinho</div>
               <div class="icon-team-type-container card-holder">
                 <img
                   src="../assets/images/grad.jpg"
@@ -169,19 +147,19 @@ function generateHTML(data) {
                   height="44"
                   alt="intern graduation cap"
                 />
-                <p>${data[4].teamMember}</p>
+                <p>Intern</p>
               </div>
             </div>
             <div class="card-bottom">
               <ul class="list-group list-group-flush card-list">
-                <li class="list-group-item">ID: ${data[4].internId}</li>
+                <li class="list-group-item">ID: 001</li>
                 <li class="list-group-item">
                   Email:
-                  <a href="mailto:${data[4].internEmail}"
-                    >${data[4].internEmail}</a
+                  <a href="mailto:joz.com"
+                    >joz.com</a
                   >
                 </li>
-                <li class="list-group-item">School: ${data[4].internSchool}</li>
+                <li class="list-group-item">School: Middle</li>
               </ul>
             </div>
           </div>
@@ -197,10 +175,4 @@ function generateHTML(data) {
 </html>
 
   
-  `;
-}
-
-//INITIALIZATION ===========================================
-
-//module.exports makes this file available outside to whoever require's this generateHTML.js module
-module.exports = generateHTML;
+  

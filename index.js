@@ -9,7 +9,7 @@ const intern = require("./lib/Intern");
 const genHTML = require("./src/generateHTML");
 
 //DATA =====================================================
-const filename = "index.html";
+const filename = "./dist/index.html";
 let teamArray = [];
 
 //Create an array of initial questions for user input
@@ -113,8 +113,6 @@ function captureEngineerInfo() {
   inquirer.prompt(engineerQuestions).then(function (engineerInfo) {
     engineerInfo.teamMember = "Engineer";
     teamArray.push(engineerInfo);
-    console.log("inside engineer: ");
-    console.log(teamArray);
     //loop back so Manager can select another team member or not
     selectTeamMember();
   });
@@ -125,16 +123,13 @@ function captureInternInfo() {
   inquirer.prompt(internQuestions).then(function (internInfo) {
     internInfo.teamMember = "Intern";
     teamArray.push(internInfo);
-    console.log("inside intern: ");
-    console.log(teamArray);
     //loop back so Manager can select another team member or not
     selectTeamMember();
   });
 }
 
 function teamFinished() {
-  console.log("finished, array: ");
-  console.log(teamArray);
+  writeToFile(filename, teamArray);
 }
 
 //ask for Manager to select a team member type
@@ -156,12 +151,8 @@ function init() {
   inquirer
     .prompt(initialManagerQuestions)
     .then(function (managerAnswers) {
-      console.log("manager answers: ");
-      console.log(managerAnswers);
       managerAnswers.teamMember = "Manager";
       teamArray.push(managerAnswers);
-      console.log("manager answers AFTER: ");
-      console.log(managerAnswers);
       selectTeamMember();
     })
     .catch((error) => {
